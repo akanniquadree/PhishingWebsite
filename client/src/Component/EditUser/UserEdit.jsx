@@ -15,7 +15,7 @@ export default function UserEdit() {
   const {id} = useParams()
   useEffect(()=>{
     const getUser = async() =>{
-      const {data} = await axios.get(`http://localhost:8000/api//users/${id}`,{headers:{"authorization":"Bearer " + localStorage.getItem("token")}} )
+      const {data} = await axios.get(`http://localhost:8000/api/users/${id}`,{headers:{"authorization":"Bearer " + localStorage.getItem("token")}} )
         if(data){
           setName(data.name)
           setEmail(data.email)

@@ -3,13 +3,15 @@ const UserModel = require("../Model/UserModel")
 const dotenv = require("dotenv")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
+const Login = require("../MiddleWares/RequireLogin")
+const admin = require("../MiddleWares/Admin")
 
 
 const authRouter = express.Router()
 dotenv.config()
 
 
-authRouter.post("/register", async(req, res)=>{
+authRouter.post("/register", Login,async(req, res)=>{
     try {
         const {email, password, name, isAdmin} = req.body
         if(!email || !password || !name){
@@ -62,7 +64,7 @@ authRouter.post("/signin", async(req, res)=>{
     }
 })
 
-authRouter.get("/user",async(req, res)=>{
+authRouter.get("/user",Login,admin,async(req, res)=>{
     try {
         const user = await UserModel.find().sort("-createdAt")
         res.status(200).json(user)
@@ -83,7 +85,7 @@ authRouter.get("/users/:id",async(req, res)=>{
 })
 
 
-authRouter.put("/user/:id",async(req, res)=>{
+authRouter.put("/user/:id",Login,async(req, res)=>{
     try {
         const user = await UserModel.findOne({_id:req.params.id})
         if(user){
@@ -98,7 +100,7 @@ authRouter.put("/user/:id",async(req, res)=>{
         return res.status(500).json(error)
     }
 })
-authRouter.delete("/deleteuser/:postId",async(req, res)=>{
+authRouter.delete("/deleteuser/:postId",Login,async(req, res)=>{
     try {
         const user = await UserModel.findOne({_id:req.params.postId})
         if(user){

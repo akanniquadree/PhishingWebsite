@@ -9,7 +9,7 @@ const cors = require("cors")
 
 const app = express()
 dotenv.config()
-mongoose.connect(process.env.MONGODB_URL, {
+mongoose.connect("mongodb+srv://Quadry30:youngdollar@cluster0.tuos2.mongodb.net/pishing-website?retryWrites=true&w=majority", {
     useNewUrlParser:true
 },()=>{
     console.log("Connected to Database")

@@ -83,7 +83,7 @@ const deletePost = async(itemId) =>{
   try {
       const remove = await axios.delete(`http://localhost:8000/api/delete/${itemId}`,{
           headers:{
-              "Authorization":"Bearer " +localStorage.getItem("token")
+              "authorization":"Bearer " +localStorage.getItem("token")
           }
       })
       if(remove){

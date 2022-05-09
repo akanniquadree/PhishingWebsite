@@ -41,7 +41,7 @@ const Routing = ()=>{
             <Route path="/website" exact element={<ViewWebsite/>}/>
             <Route path="/website/:id" exact element={<WebsiteEdit/>}/>
             <Route path="/users" exact element={<ViewUser/>}/>
-            <Route path="/users/:id" exact element={<EditCreate/>}/>
+            <Route path= "/users/:id" exact element={<EditCreate/>}/>
         </>:
         <Route path="*"  element={<NotFound/>}/>
       }

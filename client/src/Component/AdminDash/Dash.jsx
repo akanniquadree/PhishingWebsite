@@ -9,13 +9,17 @@ export default function Dash() {
     const [user, setUser] = useState([])
   useEffect(()=>{
       const getPost = async() =>{
-        const {data} = await axios.get("http://localhost:8000/api/website")
+        const {data} = await axios.get("http://localhost:8000/api/website",{headers:{
+          "authorization":"Bearer " +localStorage.getItem("token")
+        }})
         if(data){
           setWebsite(data)
         }
       }
       const getUser = async() =>{
-        const {data} = await axios.get("http://localhost:8000/api/user")
+        const {data} = await axios.get("http://localhost:8000/api/user",{headers:{
+          "authorization":"Bearer " +localStorage.getItem("token")
+        }})
         if(data){
           setUser(data)
         }
