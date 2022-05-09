@@ -1,0 +1,72 @@
+.user{
+    flex:6;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.websiteWrapper{
+    height: 400px;
+    border-radius: 15px;
+    width: 600px;
+    -webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67);
+    background-color: #fff;
+}
+.userTitle{
+    color: #175dee;
+    font-size: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+}
+.userContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px;
+}
+.userInput{
+    margin-bottom: 70px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+.userInput:focus{
+    outline: none;
+}
+.userButton{
+    height: 40px;
+    color: white;
+    border: none;
+    background-color: #1775ee;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+    font-weight: 400;
+}
+.success{
+    color: green;
+    position: absolute;
+    font-size: 15px;
+    top:50px !important;
+    right: 10px !important;
+    left: auto !important;
+    -webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67);
+    background-color: #fff;
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+
+}
+.userButton:disabled{
+    cursor: not-allowed;
+    caret-color:red;
+    border: #517fbc;
+}

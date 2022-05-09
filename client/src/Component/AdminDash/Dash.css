@@ -1,0 +1,62 @@
+.dash{
+    background-color: #f0f2f5;
+    flex:6;
+    width:100vw;
+    height: calc(100vh- 50px);
+    padding: 40px;
+}
+.dashWrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.dashTop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.dashTopRight, .dashTopLeft{
+    background-color: white;
+    -webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67);
+    width: 30%;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.dashTopRight:hover, .dashTopLeft:hover{
+    box-shadow: 2px 10px 24px -1px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 2px 10px 24px -1px rgba(0,0,0,0.52);
+    -moz-box-shadow: 2px 10px 24px -1px rgba(0,0,0,0.52);
+}
+.dashTopRightTitle{
+    color: #175dee;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.dashTopRightTitle3{
+    color: #175dee;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+.dashTopRightTitle2{
+    color: #0abf2b;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.dashBottomWrapper{
+    height: 40%;
+}
+
